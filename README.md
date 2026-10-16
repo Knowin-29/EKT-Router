@@ -184,7 +184,7 @@ media settings vary across cross-system comparisons. No new SOTA claim is made.
 ## Authors
 
 Weilin Ruan¹², Yingjie Xu²³, Yangkai Wei², Bohan Zhou¹², Shuaibo Li¹,
-Harold Haodong Chen³⁴, Kaiwen Zhou², Yinchuan Li², James Cheng¹ (corresponding author).
+Harold Haodong Chen³⁴, Kaiwen Zhou², Yinchuan Li², Ying-Cong Chen³, James Cheng¹ (corresponding author).
 
 1. The Chinese University of Hong Kong
 2. Knowin.AI
@@ -196,7 +196,7 @@ Contact: [rwlinno@gmail.com](mailto:rwlinno@gmail.com).
 ```bibtex
 @misc{ruan2026ektrouter,
   title={EKT-Router: Expert--Evidence Alignment for Embodied Vision--Language Models},
-  author={Ruan, Weilin and Xu, Yingjie and Wei, Yangkai and Zhou, Bohan and Li, Shuaibo and Chen, Harold Haodong and Zhou, Kaiwen and Li, Yinchuan and Cheng, James},
+  author={Ruan, Weilin and Xu, Yingjie and Wei, Yangkai and Zhou, Bohan and Li, Shuaibo and Chen, Harold Haodong and Zhou, Kaiwen and Li, Yinchuan and Chen, Ying-Cong and Cheng, James},
   year={2026},
   howpublished={Project preprint},
   url={https://knowin-29.github.io/KnowinRouter.github.io/}
