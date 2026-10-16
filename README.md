@@ -19,14 +19,14 @@ implementation; the original MIT copyright and compatible Python APIs are retain
 **Coming soon cards only**: no downloadable research data or model weights, and no
 promised release date. This release has not reproduced the paper's experiments.
 
-## 论文与工程对齐审计
+## Paper and implementation alignment
 
-| 状态 | 实际核验与处理 |
+| Status | Implementation and evidence |
 |---|---|
-| 已实现 | 复用原工程的 outcome-derived signatures、因子化联合效用模型、Packet Verifier、单次回答管线、LoRA 包装器、训练代码与 13 个 benchmark loaders。 |
-| 已修复 | 加入工具子集与显式预算；验证时固定已支付获取成本；General 必须有独立 CPT LoRA；修复首次加载时专家被覆盖的问题；真实推理失败直接报错；补齐本地推理/测评和离线监督入口；相对深度不再冒称米制距离。 |
-| 已验证 | 原附件 19 项测试通过；发布版新增预算、独立拒绝、沉没成本、固定专家单次回答、零证据回退、适配器切换等回归测试。当前实际结果见 CI，不使用手写 passing 徽章。CPU 合成训练 smoke 可运行。 |
-| 缺少证据 | 附件未提供真实专家/路由器权重、原始预测、实验日志、完整 split/scorer 版本和原始图表工程。61.4、74.7、+1.75 等只作对应协议的论文报告结果，不能视为本轮复现。 |
+| Implemented | Reuses outcome-derived signatures, the factorized joint utility model, Packet Verifier, single-answer pipeline, LoRA wrappers, training modules, and 13 benchmark loaders. |
+| Repaired | Enforces tool subsets and explicit budgets; holds acquisition cost fixed during verification; requires an independent General CPT LoRA; fixes adapter switching on first load; surfaces real-inference failures; provides inference, evaluation, and offline-supervision entry points; distinguishes relative depth from metric distance. |
+| Verified | Regression checks cover budgets, independent packet rejection, sunk acquisition cost, a fixed expert with one answer, evidence-free fallback, and adapter switching. CPU synthetic training smoke is available. The CI badge links to executed checks. |
+| Evidence missing | Research expert/router weights, original predictions, experiment logs, complete split/scorer revisions, and original figure-authoring files are unavailable. Values such as 61.4, 74.7, and +1.75 are paper-reported results under their respective protocols, not measurements reproduced by this release. |
 
 The original snapshot had no enforced tool-subset budget, subtracted avoidable
 costs again during verification, used the bare backbone as General, could silently
