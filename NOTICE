@@ -1,0 +1,14 @@
+KnowinRouter reuses and repairs the supplied EKT-Router implementation.
+Original copyright: Copyright (c) 2026 EKT-Router Authors.
+Modifications: Copyright (c) 2026 KnowinRouter Authors.
+The original MIT LICENSE is retained without removing its attribution.
+
+External libraries, models and datasets are not relicensed by this repository.
+Qwen3-VL (Qwen), PEFT/Transformers (Hugging Face), MS-SWIFT (ModelScope),
+Grounding DINO (IDEA Research), Depth Anything V2, Tesseract, and all benchmark
+assets retain their respective upstream licenses. Consult the exact revision's
+license before using or redistributing an artifact. No external model weights,
+benchmark media, or private training corpus are included in this release.
+
+The small JSONL records under supplement/sample_data are synthetic engineering
+fixtures supplied with this project, not experimental evidence or benchmark data.

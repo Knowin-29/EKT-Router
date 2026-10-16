@@ -1,0 +1,74 @@
+# Portable defaults for EKT-Router. Override local paths with environment
+# variables or a private *.local.yaml file; do not commit machine-specific paths.
+project_name: KnowinRouter
+seed: 42
+
+paths:
+  backbone: ${KNOWINROUTER_BACKBONE:-checkpoints/backbone}
+  descriptor: ${KNOWINROUTER_DESCRIPTOR:-checkpoints/descriptor}
+  data_root: data
+  checkpoint_root: checkpoints
+  result_root: results
+  log_root: logs
+
+experts:
+  general:
+    name: General
+    adapter_id: 0
+    adapter_path: ${KNOWINROUTER_GENERAL_ADAPTER:-checkpoints/experts/general}
+  spatial_reasoning:
+    name: Spatial Reasoning
+    adapter_id: 1
+    adapter_path: ${KNOWINROUTER_SPATIAL_ADAPTER:-checkpoints/experts/spatial_reasoning}
+  spatiotemporal:
+    name: Spatiotemporal
+    adapter_id: 2
+    adapter_path: ${KNOWINROUTER_TEMPORAL_ADAPTER:-checkpoints/experts/spatiotemporal}
+
+knowledge:
+  template_db: knowledge/template_db.json
+  rag_index_dir: data/knowledge_index
+  embedding_model: BAAI/bge-small-en-v1.5
+  top_k: 5
+
+tools:
+  depth:
+    model_id: depth-anything/Depth-Anything-V2-Small-hf
+    local_path: null
+  grounding:
+    model_id: IDEA-Research/grounding-dino-tiny
+    local_path: null
+    box_threshold: 0.30
+    text_threshold: 0.25
+
+router:
+  checkpoint: ${KNOWINROUTER_ROUTER:-checkpoints/router/knowinrouter.pt}
+  tool_budget: 2.0
+  max_provider_calls: 3
+  tool_costs: {depth: 1.0, ground: 1.0, ocr: 1.0}
+  query_dim: 2048
+  signature_dim: 3
+  hidden_dim: 256
+  interaction_rank: 64
+  verifier_hidden_dim: 128
+  cost_weight: 1.0
+  commit_margin: 0.0
+  min_coverage: 0.0
+  min_confidence: 0.0
+  max_ambiguity: 1.0
+  require_provenance: true
+
+evaluation:
+  temperature: 0.0
+  seed: 42
+  max_video_frames: 32
+  max_new_tokens: 256
+  benchmarks:
+    embodied: [vsibench, openeqa, unieqa, erqa, robovqa, where2place]
+    general: [MMBench_V11, MMStar, MMMU_DEV_VAL, AI2D_TEST, MathVista_MINI,
+              TextVQA_VAL, ChartQA_TEST, DocVQA_VAL, HallusionBench, POPE]
+
+# Typed packet provider factory (module:function), loaded only in real mode.
+provider_factory: ${KNOWINROUTER_PROVIDER_FACTORY:-modules.local_providers:build_providers}
+
+action_costs: {knowledge:template: 0.05, knowledge:rag: 0.1, tool:depth: 0.1, tool:ground: 0.1, tool:ocr: 0.1}

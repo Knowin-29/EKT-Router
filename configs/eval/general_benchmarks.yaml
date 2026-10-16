@@ -1,0 +1,12 @@
+benchmarks:
+  - MMBench_V11
+  - MMStar
+  - MMMU_DEV_VAL
+  - AI2D_TEST
+  - MathVista_MINI
+  - TextVQA_VAL
+  - ChartQA_TEST
+  - DocVQA_VAL
+  - HallusionBench
+  - POPE
+paths: {}

@@ -1,0 +1,2 @@
+# Full optional runtime; prefer pyproject extras for the small CPU path.
+-e .[full,dev]

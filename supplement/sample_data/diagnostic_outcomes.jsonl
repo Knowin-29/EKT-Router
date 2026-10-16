@@ -1,0 +1,9 @@
+{"sample_id":"diag-001","media_group":"synthetic-general","expert":"general","capability_axis":"general","score":0.88}
+{"sample_id":"diag-002","media_group":"synthetic-general","expert":"spatial_reasoning","capability_axis":"general","score":0.71}
+{"sample_id":"diag-003","media_group":"synthetic-general","expert":"spatiotemporal","capability_axis":"general","score":0.69}
+{"sample_id":"diag-004","media_group":"synthetic-spatial","expert":"general","capability_axis":"spatial_reasoning","score":0.55}
+{"sample_id":"diag-005","media_group":"synthetic-spatial","expert":"spatial_reasoning","capability_axis":"spatial_reasoning","score":0.91}
+{"sample_id":"diag-006","media_group":"synthetic-spatial","expert":"spatiotemporal","capability_axis":"spatial_reasoning","score":0.66}
+{"sample_id":"diag-007","media_group":"synthetic-temporal","expert":"general","capability_axis":"spatiotemporal","score":0.52}
+{"sample_id":"diag-008","media_group":"synthetic-temporal","expert":"spatial_reasoning","capability_axis":"spatiotemporal","score":0.61}
+{"sample_id":"diag-009","media_group":"synthetic-temporal","expert":"spatiotemporal","capability_axis":"spatiotemporal","score":0.93}

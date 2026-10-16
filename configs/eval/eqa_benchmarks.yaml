@@ -1,0 +1,8 @@
+benchmarks:
+  - vsibench
+  - openeqa
+  - unieqa
+  - erqa
+  - robovqa
+  - where2place
+paths: {}

@@ -1,0 +1,18 @@
+# General CPT data are not distributed. These are runnable starting defaults,
+# not a recovered experimental recipe: the original CPT run config is missing.
+expert: general
+task: pt
+model_path: ${KNOWINROUTER_BACKBONE}
+data_path: ${KNOWINROUTER_GENERAL_DATA}
+output_dir: checkpoints/experts/general
+tuner_type: lora
+lora_rank: 128
+lora_alpha: 256
+lora_dropout: 0.05
+freeze_vision_tower: true
+freeze_aligner: true
+learning_rate: 0.0001
+num_train_epochs: 1
+max_length: 32768
+seed: 42
+report_to: none

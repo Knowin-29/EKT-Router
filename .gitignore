@@ -1,0 +1,60 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private research artifacts
+docs/
+paper/
+papers/
+logs/
+figs/
+figures/
+checkpoints/
+results/
+outputs/
+wandb/
+data/
+datasets/
+artifacts/
+predictions/
+*.log
+
+# Model and dataset payloads
+*.bin
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+*.arrow
+*.parquet
+*.npy
+*.npz
+
+# Build and packaging
+build/
+dist/
+*.egg-info/
+*.zip
+*.zip.sha256

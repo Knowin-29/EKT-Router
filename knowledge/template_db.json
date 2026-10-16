@@ -1,0 +1,56 @@
+{
+  "route_planning": {
+    "expert": "spatiotemporal",
+    "title": "Route Planning Template",
+    "template": "To answer a route planning question, reason step by step:\n1. Identify the current position and facing direction from the egocentric view.\n2. Identify the target location or object mentioned in the question.\n3. List intermediate landmarks or waypoints between the current position and target.\n4. For each waypoint, determine the turning direction (left/right/straight) and approximate number of steps.\n5. Produce the final route description.",
+    "keywords": ["how to get to", "navigate to", "route", "path to", "way to", "directions to", "go to"]
+  },
+  "action_sequencing": {
+    "expert": "spatiotemporal",
+    "title": "Action Sequencing Template",
+    "template": "To reason about temporal ordering of actions:\n1. Segment the video/frames into discrete events.\n2. For each event, extract the actor, object, and verb (who does what to what).\n3. Order events by visual cues (hand position, object displacement).\n4. Relate the ordering back to the question ('before', 'after', 'first', 'last').",
+    "keywords": ["before", "after", "then", "first", "last", "sequence", "next", "previous", "action order"]
+  },
+  "absolute_distance": {
+    "expert": "spatial_reasoning",
+    "title": "Absolute Distance Estimation",
+    "template": "To estimate an absolute distance in meters:\n1. Identify the object(s) referenced in the question.\n2. Use known reference objects to establish scale (standard door ~2m tall, table ~0.75m).\n3. Estimate depth using perspective / vanishing cues and the chosen reference.\n4. Report the distance in meters with one decimal place.",
+    "keywords": ["how far", "distance", "how many meters", "feet away", "how close", "meters from"]
+  },
+  "relative_spatial": {
+    "expert": "spatial_reasoning",
+    "title": "Relative Spatial Relation",
+    "template": "To answer a relative spatial-relation question:\n1. Identify both objects A (anchor) and B (target).\n2. Establish the viewer / camera frame (egocentric, allocentric, or object-centric).\n3. Compare positions along each axis (left/right, front/back, above/below).\n4. Answer in the axis and direction explicitly asked.",
+    "keywords": ["left of", "right of", "behind", "in front of", "above", "below", "next to", "nearest"]
+  },
+  "room_size": {
+    "expert": "spatial_reasoning",
+    "title": "Room Size Estimation",
+    "template": "To estimate room size:\n1. Identify reference objects with known dimensions (doors ~0.9m wide, standard ceiling ~2.4m).\n2. Count how many reference objects span the room dimensions.\n3. Multiply to estimate length, width, and area.\n4. Report in square meters or square feet as requested.",
+    "keywords": ["room size", "how big is the room", "area of", "square feet", "square meters"]
+  },
+  "object_size": {
+    "expert": "spatial_reasoning",
+    "title": "Object Size Estimation",
+    "template": "To estimate an object's size:\n1. Identify the target object in the scene.\n2. Find a nearby reference object with known dimensions.\n3. Compare sizes visually along each dimension.\n4. Report the approximate length / width / height with units.",
+    "keywords": ["how big", "how tall", "how wide", "how long", "size of", "dimensions", "dimension of"]
+  },
+  "point_grounding": {
+    "expert": "spatial_reasoning",
+    "title": "Pick-and-Place Pointing",
+    "template": "To produce a point coordinate for a referring expression:\n1. Parse the referring expression into an object category and distinguishing attributes.\n2. Locate the candidate region(s) in the image.\n3. Disambiguate using the attribute cues (color, size, spatial relation, state).\n4. Output the centroid pixel coordinate (x,y) normalized to [0,1].",
+    "keywords": ["point to", "point at", "where is", "coordinate of", "pick up", "place", "locate"]
+  },
+  "bbox_grounding": {
+    "expert": "spatial_reasoning",
+    "title": "Bounding-Box Grounding",
+    "template": "To ground a referring expression to a bounding box:\n1. Detect candidates of the queried category.\n2. Filter with attribute/relation constraints from the query.\n3. Return the tightest box (x_min, y_min, x_max, y_max) normalized to [0,1].",
+    "keywords": ["bounding box", "bbox", "box around", "draw a box", "outline"]
+  },
+  "general_vqa": {
+    "expert": "general",
+    "title": "General Visual QA",
+    "template": "To answer an open-ended visual question:\n1. Identify the entities or events relevant to the question.\n2. Enumerate attributes / categories that the question might target.\n3. Answer concisely, matching the required granularity (noun / color / count).",
+    "keywords": ["what color", "what is", "which object", "what kind of", "describe"]
+  }
+}

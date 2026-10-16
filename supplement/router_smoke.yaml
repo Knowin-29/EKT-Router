@@ -1,0 +1,14 @@
+train_path: supplement/sample_data/route_pairs.jsonl
+output_dir: outputs/supplement_smoke
+query_dim: 4
+signature_dim: 3
+hidden_dim: 16
+interaction_rank: 4
+verifier_hidden_dim: 8
+learning_rate: 1.0e-3
+weight_decay: 0.0
+batch_size: 2
+epochs: 2
+seed: 7
+
+synthetic_smoke: true
