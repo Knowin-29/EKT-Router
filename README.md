@@ -2,9 +2,9 @@
 
 # EKT-Router: Expert–Evidence Alignment for Embodied Vision–Language Models
 
-[Project](https://knowin-29.github.io/KnowinRouter.github.io/) · [Paper](https://knowin-29.github.io/KnowinRouter.github.io/assets/KnowinRouter.pdf) · [Data card](https://huggingface.co/datasets/Knowin-29/KnowinRouter) · [Model card](https://huggingface.co/Knowin-29/KnowinRouter) · [Collection](https://huggingface.co/collections/Knowin-29/ekt-router-6ad199395e1a1e54b4e1a179)
+[Project](https://knowin-29.github.io/KnowinRouter.github.io/) · [Paper](https://knowin-29.github.io/KnowinRouter.github.io/assets/KnowinRouter.pdf) · [Data card](https://huggingface.co/datasets/Knowin-29/EKT-Router) · [Model card](https://huggingface.co/Knowin-29/EKT-Router) · [Collection](https://huggingface.co/collections/Knowin-29/ekt-router-6ad199395e1a1e54b4e1a179)
 
-[![CI](https://github.com/Knowin-29/KnowinRouter/actions/workflows/ci.yml/badge.svg)](https://github.com/Knowin-29/KnowinRouter/actions/workflows/ci.yml)
+[![CI](https://github.com/Knowin-29/EKT-Router/actions/workflows/ci.yml/badge.svg)](https://github.com/Knowin-29/EKT-Router/actions/workflows/ci.yml)
 [![MIT](https://img.shields.io/badge/code-MIT-147d82)](LICENSE)
 
 </div>
@@ -61,8 +61,8 @@ Python 3.10+ is required. The following CPU path downloads Python dependencies,
 not model weights, datasets, or paid API responses.
 
 ```bash
-git clone https://github.com/Knowin-29/KnowinRouter.git
-cd KnowinRouter
+git clone https://github.com/Knowin-29/EKT-Router.git
+cd EKT-Router
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
