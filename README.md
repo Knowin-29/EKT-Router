@@ -1,16 +1,15 @@
 <div align="center">
 
-# KnowinRouter
-**Expert–Evidence Alignment for Embodied Vision–Language Models**
+# EKT-Router: Expert–Evidence Alignment for Embodied Vision–Language Models
 
-[Project](https://knowin-29.github.io/KnowinRouter.github.io/) · [Paper](https://knowin-29.github.io/KnowinRouter.github.io/assets/KnowinRouter.pdf) · [Data card](https://huggingface.co/datasets/Knowin-29/KnowinRouter) · [Model card](https://huggingface.co/Knowin-29/KnowinRouter) · [Collection](https://huggingface.co/collections/Knowin-29/knowinrouter-6ad199395e1a1e54b4e1a179)
+[Project](https://knowin-29.github.io/KnowinRouter.github.io/) · [Paper](https://knowin-29.github.io/KnowinRouter.github.io/assets/KnowinRouter.pdf) · [Data card](https://huggingface.co/datasets/Knowin-29/KnowinRouter) · [Model card](https://huggingface.co/Knowin-29/KnowinRouter) · [Collection](https://huggingface.co/collections/Knowin-29/ekt-router-6ad199395e1a1e54b4e1a179)
 
 [![CI](https://github.com/Knowin-29/KnowinRouter/actions/workflows/ci.yml/badge.svg)](https://github.com/Knowin-29/KnowinRouter/actions/workflows/ci.yml)
 [![MIT](https://img.shields.io/badge/code-MIT-147d82)](LICENSE)
 
 </div>
 
-KnowinRouter jointly selects **one capability expert and the evidence it should receive**.
+EKT-Router jointly selects **one capability expert and the evidence it should receive**.
 It is Knowin's first internal Mixture-of-LoRA (MoL) solution: three independent LoRA
 experts share one Qwen3-VL-8B backbone. This describes an internal project milestone,
 not a claim of academic priority. The source is derived from the supplied EKT-Router
@@ -52,7 +51,7 @@ evaluation runner. These are repaired in the inherited implementation.
   reselection or repeated tool loop in online verification. All rejected packets
   recover the same expert's evidence-free input. This is not a safety guarantee.
 
-`modules.pipeline.KnowinRouterPipeline` (compatible alias: `EKTRouterPipeline`)
+`modules.pipeline.EKTRouterPipeline` (compatible alias: `KnowinRouterPipeline`)
 provides `run_bounded`. `modules.providers.PacketProvider` enforces one call per
 selected provider and represents acquisition failures as invalid packets.
 
@@ -195,8 +194,8 @@ Harold Haodong Chen³⁴, Kaiwen Zhou², Yinchuan Li², James Cheng¹ (correspon
 Contact: [rwlinno@gmail.com](mailto:rwlinno@gmail.com).
 
 ```bibtex
-@misc{ruan2026knowinrouter,
-  title={KnowinRouter: Expert--Evidence Alignment for Embodied Vision--Language Models},
+@misc{ruan2026ektrouter,
+  title={EKT-Router: Expert--Evidence Alignment for Embodied Vision--Language Models},
   author={Ruan, Weilin and Xu, Yingjie and Wei, Yangkai and Zhou, Bohan and Li, Shuaibo and Chen, Harold Haodong and Zhou, Kaiwen and Li, Yinchuan and Cheng, James},
   year={2026},
   howpublished={Project preprint},

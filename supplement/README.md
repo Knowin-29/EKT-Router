@@ -1,6 +1,6 @@
 # Code and Data Supplement
 
-This directory provides a compact CPU validation path for KnowinRouter.
+This directory provides a compact CPU validation path for EKT-Router.
 The records in `sample_data/` are synthetic schema examples. They do not contain
 benchmark questions, media, predictions, private storage paths, or model output
 from the submitted experiments.
